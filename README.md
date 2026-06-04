@@ -1,16 +1,33 @@
 # STM32 Programming with ST-Link on CachyOS (Arch-based Linux) **[WIP]**
 
-This guide provides a practical, step-by-step workflow for setting up a basic STM32 development using an ST-Link debugger, STM32CubeMX for initial code generation, and VSCode for development.
-The goal is to provide required resources and help with the basic setup on Linux, while addressing common issues such as USB detection, permissions (*udev* rules), and ST-Link connectivity.
+This guide provides a practical, step-by-step workflow for setting up basic STM32 development using an ST-Link debugger, STM32CubeMX for initial code generation, and VSCode for development. The goal is to provide the required resources and help with the basic setup on Linux, while addressing common issues such as USB detection, permissions (**udev** rules), and ST-Link connectivity.
 
 ### Prerequisites
 This guide assumes:
   * basic familiarity with embedded systems (optional but helpful)
   * basic command-line usage (navigating directories, running commands)
 
+### Disclaimer
+  * All commands and configurations in this guide are provided as-is. You are responsible for any changes made to your system.
+  * If you are not familiar with the command line, you should still be able to follow along, but you should **always review and understand commands before executing them**. Running commands with elevated privileges (e.g. `sudo`) can modify system configuration and may have unintended consequences.
+
 ## Operating System
 
+### Arch-based systems
+This guide was tested on **CachyOS**, but it should work with little to no modification on other Arch-based Linux distributions as well, as they share the same package manager (`pacman`) and system structure.
+
+### Debian-based systems
+As there are differences in package installation, package names, and file locations (e.g. for udev rules), the exact steps may differ. However, the concepts and fixes presented in this guide should still translate well to Debian-based systems.
+
 ## Used Hardware
+
+The setup described in this guide was tested using the following hardware:
+  * **Debugger / ST-Link:**
+    [STM32 Nucleo-144 development board](https://www.st.com/en/evaluation-tools/nucleo-f767zi.html) (STM32F767ZI MCU), which includes an integrated ST-Link programmer/debugger.
+  * **Target device:**
+    STM32F103C8T6 MCU on a [Blue Pill development board](https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html).
+
+**Note:** This setup should also work with a standalone ST-Link and other STM32 MCU combinations that support SWD.
 
 ## Prerequisite Software
 
