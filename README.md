@@ -30,6 +30,13 @@ The setup described in this guide was tested using the following hardware:
 **Note:** This setup should also work with a standalone ST-Link and other STM32 MCU combinations that support SWD.
 
 ## Prerequisite Software
+You need to download the following software either directly or from the [AUR](https://wiki.archlinux.org/title/Arch_User_Repository). I used the official ST installer for STM32CubeMX and the AUR for the [Microsoft version of VSCode](https://wiki.archlinux.org/title/Visual_Studio_Code).
+
+ * **[STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html):** Used for MCU configuration and generating the initial code.
+ * **[VSCode](https://code.visualstudio.com/):** Main development environment.
+ * **[STM32CubeIDE Extension for VSCode](https://marketplace.visualstudio.com/items?itemName=stmicroelectronics.stm32-vscode-extension):** Integrates STM32-specific functionality into VSCode.
+
+**Important:** When using the AUR, always review the PKGBUILD before installing any package.
 
 ## Generating Code (CubeMX)
 
